@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light"><title>Tu respuesta · Gabriela & David</title>
+<meta name="color-scheme" content="light"><title>Tu respuesta · Gabriela y David</title>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Marcellus&family=Pinyon+Script&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box}body{margin:0;background:linear-gradient(#fff,#f4ece0);color:#3b2f27;font:400 18px/1.6 Lora,Georgia,serif;text-align:center;padding:50px 20px}
-.lab{letter-spacing:.35em;text-transform:uppercase;font-size:13px;color:#8a3342}h1{font:400 clamp(48px,10vw,70px) "Pinyon Script",cursive;margin:6px 0 20px}
-form{max-width:520px;margin:auto;text-align:left;background:#fff;padding:32px 28px;box-shadow:0 8px 30px #3b2f271a}
-label{display:block;margin:16px 0 4px;letter-spacing:.15em;text-transform:uppercase;font-size:13px;color:#8a3342}
-input,select,textarea{width:100%;font:inherit;padding:10px;border:1px solid #e3d6c3;background:#fffdf9;color:inherit}
-button{margin-top:24px;width:100%;border:1px solid #8a3342;background:#8a3342;color:#fff;padding:14px;font:500 15px Marcellus;letter-spacing:.25em;text-transform:uppercase;cursor:pointer}
-a{color:#8a3342}#ok{display:none;font:400 40px "Pinyon Script";margin-top:30px;color:#8a3342}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(#1f4a35,#19402e);color:#f4eadf;font:400 18px/1.6 Lora,Georgia,serif;text-align:center;padding:56px 20px}
+.lab{font-family:Marcellus,serif;letter-spacing:.35em;text-transform:uppercase;font-size:13px;color:#e2c78f}
+h1{font:400 clamp(50px,11vw,76px)/1.1 "Pinyon Script",cursive;margin:8px 0 6px}
+p.s{max-width:460px;margin:0 auto 30px;font-style:italic;color:#d6ccb6}
+form{max-width:540px;margin:auto;text-align:left;color:#3b2f27;background:#f4eadf;border:1px solid #c9a96e;padding:34px 30px;box-shadow:0 14px 40px #0004}
+label{display:block;margin:18px 0 5px;font-family:Marcellus,serif;letter-spacing:.18em;text-transform:uppercase;font-size:13px;color:#8c1c2c}
+input,select,textarea{width:100%;font:inherit;padding:11px 12px;border:1px solid #d9c7a8;background:#fffdf9;color:#3b2f27;border-radius:2px}
+input:focus,select:focus,textarea:focus{outline:2px solid #8c1c2c}
+button{margin-top:28px;width:100%;border:1px solid #8c1c2c;background:transparent;color:#8c1c2c;padding:14px;font:500 15px Marcellus,serif;letter-spacing:.25em;text-transform:uppercase;cursor:pointer;transition:.3s}
+button:hover{background:#8c1c2c;color:#fff}
+a{color:#e2c78f}#ok{display:none;font:400 44px "Pinyon Script",cursive;margin-top:30px;color:#e2c78f}
 </style></head><body>
 <div class="lab">Gabriela &amp; David · 18.12.2027</div><h1>Tu respuesta</h1>
+<p class="s">Cuéntanos si vendrás y si hay algo que debamos tener en cuenta para que todo salga perfecto.</p>
 <!-- Sustituye TU_ID por el de tu formulario gratuito de formspree.io (o web3forms.com) -->
 <form id="f" action="https://formspree.io/f/TU_ID" method="POST">
 <label>Nombre y apellidos</label><input name="nombre" required>
@@ -22,7 +27,7 @@ a{color:#8a3342}#ok{display:none;font:400 40px "Pinyon Script";margin-top:30px;c
 <label>Un mensaje para nosotros</label><textarea name="mensaje" rows="3"></textarea>
 <button>Enviar respuesta</button></form>
 <div id="ok">¡Gracias! Nos vemos en Benidorm ♡</div>
-<p><a href="index.html">← Volver a la invitación</a></p>
+<p style="margin-top:34px"><a href="index.html">← Volver a la invitación</a></p>
 <script>
-f.onsubmit=function(e){e.preventDefault();fetch(f.action,{method:"POST",body:new FormData(f),headers:{Accept:"application/json"}}).then(function(r){if(r.ok){f.style.display="none";ok.style.display="block"}else alert("No se pudo enviar. Inténtalo de nuevo.")}).catch(function(){alert("No se pudo enviar.")})}
+f.onsubmit=function(e){e.preventDefault();fetch(f.action,{method:"POST",body:new FormData(f),headers:{Accept:"application/json"}}).then(function(r){if(r.ok){f.style.display="none";document.querySelector(".s").style.display="none";ok.style.display="block"}else alert("No se pudo enviar. Inténtalo de nuevo.")}).catch(function(){alert("No se pudo enviar.")})}
 </script></body></html>
