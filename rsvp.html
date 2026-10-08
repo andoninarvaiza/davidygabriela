@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light"><title>Confirmar asistencia · Gabriela & David</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+<meta name="color-scheme" content="light"><title>Tu respuesta · Gabriela & David</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Marcellus&family=Pinyon+Script&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box}body{margin:0;background:linear-gradient(#fff,#f5eee3);color:#4a3a2d;font:400 20px/1.6 "Cormorant Garamond",Georgia,serif;text-align:center;padding:50px 20px}
-.lab{letter-spacing:.35em;text-transform:uppercase;font-size:13px;color:#b38b5d}h1{font:400 clamp(48px,10vw,70px) "Great Vibes",cursive;margin:6px 0 20px}
-form{max-width:520px;margin:auto;text-align:left;background:#fff;padding:32px 28px;box-shadow:0 8px 30px #4a3a2d1a}
-label{display:block;margin:16px 0 4px;letter-spacing:.15em;text-transform:uppercase;font-size:13px;color:#b38b5d}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(#fff,#f4ece0);color:#3b2f27;font:400 18px/1.6 Lora,Georgia,serif;text-align:center;padding:50px 20px}
+.lab{letter-spacing:.35em;text-transform:uppercase;font-size:13px;color:#8a3342}h1{font:400 clamp(48px,10vw,70px) "Pinyon Script",cursive;margin:6px 0 20px}
+form{max-width:520px;margin:auto;text-align:left;background:#fff;padding:32px 28px;box-shadow:0 8px 30px #3b2f271a}
+label{display:block;margin:16px 0 4px;letter-spacing:.15em;text-transform:uppercase;font-size:13px;color:#8a3342}
 input,select,textarea{width:100%;font:inherit;padding:10px;border:1px solid #e3d6c3;background:#fffdf9;color:inherit}
-button{margin-top:24px;width:100%;border:1px solid #b38b5d;background:#b38b5d;color:#fff;padding:14px;font:500 15px "Cormorant Garamond";letter-spacing:.25em;text-transform:uppercase;cursor:pointer}
-a{color:#b38b5d}#ok{display:none;font:400 40px "Great Vibes";margin-top:30px;color:#b38b5d}
+button{margin-top:24px;width:100%;border:1px solid #8a3342;background:#8a3342;color:#fff;padding:14px;font:500 15px Marcellus;letter-spacing:.25em;text-transform:uppercase;cursor:pointer}
+a{color:#8a3342}#ok{display:none;font:400 40px "Pinyon Script";margin-top:30px;color:#8a3342}
 </style></head><body>
-<div class="lab">Gabriela &amp; David · 18.12.2027</div><h1>Confirma tu asistencia</h1>
+<div class="lab">Gabriela &amp; David · 18.12.2027</div><h1>Tu respuesta</h1>
 <!-- Sustituye TU_ID por el de tu formulario gratuito de formspree.io (o web3forms.com) -->
 <form id="f" action="https://formspree.io/f/TU_ID" method="POST">
 <label>Nombre y apellidos</label><input name="nombre" required>
@@ -20,8 +20,8 @@ a{color:#b38b5d}#ok{display:none;font:400 40px "Great Vibes";margin-top:30px;col
 <label>Alergias o intolerancias</label><input name="alergias">
 <label>¿Qué canción no puede faltar?</label><input name="cancion">
 <label>Un mensaje para nosotros</label><textarea name="mensaje" rows="3"></textarea>
-<button>Enviar</button></form>
-<div id="ok">¡Gracias, os esperamos! ♡</div>
+<button>Enviar respuesta</button></form>
+<div id="ok">¡Gracias! Nos vemos en Benidorm ♡</div>
 <p><a href="index.html">← Volver a la invitación</a></p>
 <script>
 f.onsubmit=function(e){e.preventDefault();fetch(f.action,{method:"POST",body:new FormData(f),headers:{Accept:"application/json"}}).then(function(r){if(r.ok){f.style.display="none";ok.style.display="block"}else alert("No se pudo enviar. Inténtalo de nuevo.")}).catch(function(){alert("No se pudo enviar.")})}
